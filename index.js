@@ -3,6 +3,7 @@
 // import './lib/sheetjs/xlsx.mjs'
 
 //https://www.youtube.com/watch?v=BE8U2wPL4k0&ab_channel=ISeeSharp
+//https://blog.katastros.com/a?ID=c788097f-bfc1-42eb-88cb-144f6978792b
 
 document.getElementById('btn-export').onclick = function() {
     generateReport('xlsx')
@@ -32,9 +33,12 @@ function generateReport(type, fn, dl) {
         XLSX.writeFile(workbook , fn || (nameFile +'.'+ (type || 'xlsx')));
 }
 
-
-// upload file
-function UploadExcelFile(){
+//delete col and row empty
+function deleteRowsAndColums(wb,ws){
 
 }
+
+
+// upload file
+
 
